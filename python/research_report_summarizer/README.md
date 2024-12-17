@@ -46,7 +46,7 @@ UI 버전이다. 수행 방법은 다음과 같다.
     $ streamlit run research_report_summarize_st.py
     ```
 
-2. 화면에 URL이 출력되면 `Network URL`을 웹브라우저에 넣는다. (포트번호 유의한다.)
+2. 화면에 URL이 출력되면 `Network URL`이나 `External URL`을 웹브라우저에 넣는다. (포트번호 유의한다.)
    해당 프로그램이 웹 브라우저에서 수행된다.
     ```shell
 
