@@ -1,0 +1,21 @@
+input_variables:
+- content
+
+partial_variables:
+- format_instructions
+
+template: |
+    당신은 연구 논문의 요약을 정리하는 작업을 맡았습니다.
+
+    다음은 연구 논문의 요약의 내용입니다.
+
+    * 내용:
+    """
+      {content}
+    """
+
+    주어진 내용을 아래 포맷에 맞춰서 출력하십시오.
+    포맷의 각 항목이 원문과 정확히 일치해야 합니다.
+    중심어는 국문과 영문이 각각 5개이며 서로 쌍을 이룹니다.
+
+    {format_instructions}

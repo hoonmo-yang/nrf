@@ -1,0 +1,25 @@
+input_variables:
+- content
+- num_keywords
+
+partial_variables:
+- format_instructions
+
+template: |
+    당신은 연구 논문의 중심어를 추출하는 작업을 맡았습니다.
+
+    다음은 연구 논문의 내용입니다. 
+
+    * 내용:
+    """
+      {content}
+    """
+
+    내용에 대한 중심어를 {num_keywords}개 추출하기 바랍니다.
+    추출한 중심어는 각각 국문과 영문으로 쌍을 이뤄야 합니다.
+    국문 중심어는 외국어가 포함되면 안 됩니다. 적절한 번역어가
+    없으면 한글 외래어로 표기하십시오.
+
+    추출한 중심어는 아래 포맷에 맞춰서 출력하십시오.
+
+    {format_instructions}

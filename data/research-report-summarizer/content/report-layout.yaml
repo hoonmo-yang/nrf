@@ -1,0 +1,31 @@
+source_template:
+  header: 중견연구 최종보고서
+  summary: 〈 연구결과 요약문 〉
+  toc: 〈  목   차  〉
+  abstract: 1. 연구개발과제의 개요
+  content: 2. 연구개발과제의 수행 과정 및 수행 내용
+  outcome: 3. 연구개발과제의 수행 결과 및 목표 달성 정도
+  contribution: 4. 연구개발성과의 관련 분야에 대한 기여 정도
+  planning: 5. 연구개발성과의 관리 및 활용 계획
+  checklist: 6. 자체점검표
+  reference: 7. 참고문헌
+
+summary_template:
+  abstract:
+    title: 연구개요
+    sections:
+    - abstract
+  outcome:
+    title: 연구 목표대비 연구결과
+    sections:
+    - outcome
+  expectation:
+    title: 연구개발성과의 활용 계획 및 기대효과(연구개발결과의 중요성)
+    sections:
+    - contribution
+    - planning
+  keyword:
+    title: 중심어
+    sections:
+    - abstract
+    - content

@@ -1,0 +1,79 @@
+metadata:
+  version: v1
+  name: nrf-poc-research-report-summarizer
+  label: "2024-12-15"
+  task: research-report-summarizer
+  tags:
+  - nrf-poc
+  - research-report-summarizer
+  - "2024-12-15"
+
+directive:
+  langsmith: false
+  force: false
+  truncate: false
+  num_tries: 8
+  recovery_time: 0.5
+
+export:
+  table:
+    enable: true
+    stem:
+    columns:
+    extension:
+    - .csv
+    - .json
+    - .xlsx
+
+  document:
+    enable: true
+    keywords:
+    - institution
+    - name
+    extension:
+    - .pdf
+    - .docx
+
+models:
+- [gpt-4o, gpt-4o]
+
+corpora:
+- mode:
+  - aggregate
+  prefix:
+  - sample
+  stem:
+  - "*"
+  extension:
+  - .hwp
+
+cases:
+- module:
+  - stuff_summarizer
+  content_kr:
+  - extract_header_prompt
+  - extract_summary_prompt
+  - similarity_prompt
+  - summarize_prompt
+  - keyword_prompt
+  parameter:
+  - max_tokens
+  - num_keywords
+
+parameter:
+  max_tokens:
+  - 800
+  num_keywords:
+  - 5
+
+content_kr:
+  extract_header_prompt:
+  - pt-xhead-kr.yaml
+  extract_summary_prompt:
+  - pt-xsum-kr.yaml
+  similarity_prompt:
+  - pt-sim-kr.yaml
+  summarize_prompt:
+  - pt-sum-kr.yaml
+  keyword_prompt:
+  - pt-kwd-kr.yaml

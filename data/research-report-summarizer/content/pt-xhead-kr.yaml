@@ -1,0 +1,18 @@
+input_variables:
+- content
+
+partial_variables:
+- format_instructions
+
+template: |
+    다음 내용에서 연구개발과제명(국문, 영문) 주관연구개발 기관과
+    연구 책임자의 인적 사항을 추출하십시오.
+
+    * 내용:
+    """
+      {content}
+    """
+
+    추출한 정보는 아래 포맷에 맞춰 출력하십시오.
+
+    {format_instructions}

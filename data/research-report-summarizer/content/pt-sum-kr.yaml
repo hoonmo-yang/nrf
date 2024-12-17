@@ -1,0 +1,33 @@
+input_variables:
+- title
+- content
+- max_tokens
+
+partial_variables:
+- format_instructions
+
+template: |
+    당신은 연구 논문의 일부를 요약하는 작업을 맡았습니다.
+
+    다음은 연구 논문의 일부입니다.
+
+    *제목*: {title}
+
+    *내용*:
+    """
+      {content}
+    """
+
+    내용을 *제목*과 관련하여 요약해야 합니다.
+
+    요약한 내용의 길이는 {max_tokens} 토큰이 최대입니다.
+
+    모든 내용은 한국어로 요약하나, 원문의 단어는 원어 그대로 사용하십시오.
+
+    문장은 반드시 "-이다"로 끝나는 서술체로 작성하십시오.
+
+    주어진 문장을 요약하되, 요약된 핵심 내용만 출력하세요.
+
+    요약 결과는 아래 포맷에 맞춰서 출력하십시오.
+
+    {format_instructions}

@@ -1,0 +1,70 @@
+metadata:
+  version: v1
+  name: nrf-poc-qa-dataset-generator
+  label: "2024-12-17"
+  task: qa-dataset-generator
+  tags:
+  - nrf-poc
+  - qa-dataset-generator
+  - "2024-12-17"
+
+directive:
+  langsmith: false
+  force: false
+  truncate: false
+  num_tries: 8
+  recovery_time: 0.5
+
+export:
+  table:
+    enable: true
+    stem:
+    columns:
+    - 문제
+    - 정답
+    - file
+    extension:
+    - .csv
+
+  document:
+    enable: false
+    keywords:
+    extension:
+
+models:
+- [hcx-003]
+
+corpora:
+- mode:
+  - aggregate
+  prefix:
+  - "sample"
+  stem:
+  - "*"
+  extension:
+  - .hwpx
+
+cases:
+- module:
+  - vanila_*qa*_dataset_generator
+  content_kr:
+  - generate_prompt
+  parameter:
+  - chunk_size
+  - chunk_overlap
+  - num_datasets
+  - max_tokens
+
+parameter:
+  chunk_size:
+  - 500
+  chunk_overlap:
+  - 50
+  max_tokens:
+  - 600
+  num_datasets:
+  - 100
+
+content_kr:
+  generate_prompt:
+  - pt-qagen-kr.yaml

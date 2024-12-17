@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> 연구결과 요약문 </title>
+
+        {css_content}
+
+        <link rel="font-kr" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h2>연구과제 개요</h2>
+        <div class="section1">
+            <table>
+            <tr>
+                <td rowspan="2">연구개발과제명</td>
+                <td colspan="4">[국문]&nbsp;&nbsp;{title_kr}</td>
+            </tr>
+            <tr>
+                <td colspan="4">[영문]&nbsp;&nbsp;{title_en}</td>
+            </tr>
+            <tr>
+                <td>주관연구개발기관</td>
+                <td colspan="4">{institution}</td>
+            </tr>
+            <tr>
+                <td rowspan="2">연구책임자</td>
+                <td>성명</td>
+                <td>{name}</td>
+                <td>직급(직위)</td>
+                <td>{position}</td>
+            </tr>
+            <tr>
+                <td>소속부서</td>
+                <td>{department}</td>
+                <td>전공</td>
+                <td>{major}</td>
+            </tr>
+            </table>
+        </div>
+
+        <h2>연구결과 요약문 유사도</h2>
+        <div class="section2">
+            <table>
+            <tr>
+                <td>File</td>
+                <td colspan="2">{file}</td>
+            </tr>
+            <tr>
+                <td colspan="3">유사도 평가 (Score: 0~10)</td>
+            </tr>
+            <tr>
+                <td>항목</td>
+                <td>점수</td>
+                <td>차이점</td>
+            </tr>
+            <tr>
+                <td>{abstract_title}</td>
+                <td>{abstract_score}</td>
+                <td>{abstract_difference}</td>
+            </tr>
+            <tr>
+                <td>{outcome_title}</td>
+                <td>{outcome_score}</td>
+                <td>{outcome_difference}</td>
+            </tr>
+            <tr>
+                <td>{expectation_title}</td>
+                <td>{expectation_score}</td>
+                <td>{expectation_difference}</td>
+            </tr>
+            <tr>
+                <td>{keyword_title}</td>
+                <td>{keyword_score}</td>
+                <td>{keyword_difference}</td>
+            </tr>
+            </table>
+        </div>
+
+        <h2>연구결과 요약문</h2>
+        <div class="section3">
+            <table>
+            <tr>
+                <td></td>
+                <td>직접 작성</td>
+                <td>AI 작성</td>
+            </tr>
+            <tr>
+                <td>{abstract_title}</td>
+                <td>{abstract_content_gt}</td>
+                <td>{abstract_content_pv}</td>
+            </tr>
+            <tr>
+                <td>{outcome_title}</td>
+                <td>{outcome_content_gt}</td>
+                <td>{outcome_content_pv}</td>
+            </tr>
+            <tr>
+                <td>{expectation_title}</td>
+                <td>{expectation_content_gt}</td>
+                <td>{expectation_content_pv}</td>
+            </tr>
+            <tr>
+                <td>{keyword_title} (국문)</td>
+                {keyword_kr_gt}
+                {keyword_kr_pv}
+            </tr>
+            <tr>
+                <td>{keyword_title} (영문)</td>
+                {keyword_en_gt}
+                {keyword_en_pv}
+            </tr>
+        </div>
+    </body>
+</html>
+
