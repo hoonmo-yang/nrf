@@ -15,7 +15,7 @@ install::
 		echo "export CENAI_DIR=\"$(CURRENT_DIR)\"" >> $(BASHRC); \
 		echo "envar 'CENAI_DIR' added: $(CURRENT_DIR)"; \
 	fi
-	@echo "export PYTHONPATH=\$$PYTHONPATH:\$$CENAI_DIR" >> $(BASHRC)
+	@echo "export PYTHONPATH=\$$CENAI_DIR:python:\$$PYTHONPATH" >> $(BASHRC)
 	@echo "envar 'PYTHONPATH' added: $(CURRENT_DIR)"
 	@echo "RUN command: source ~/.bashrc"
 

@@ -45,6 +45,16 @@ $ conda create -n nrf python=3.12
 $ conda activate nrf
 ```
 
+**주의 사항**: 로그인할 때마다 `conda activate nrf`를 수행해야 한다.
+
+그러지 않을 경우, 프로그램 수행이 제대로 되지 않는다.
+
+로그인할 때마다 자동으로 활성화하는 방법은 `~/.bashrc`에 해당 명령어를 입력한다.
+```.bashrc
+...
+conda activate nrf
+```
+
 ### 소프트웨어 설치
 1. 설치를 원하는 디렉토리로 이동한 후 아래의 명령어를 수행한다. 
 ```shell
